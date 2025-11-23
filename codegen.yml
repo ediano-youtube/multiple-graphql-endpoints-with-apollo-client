@@ -1,0 +1,21 @@
+overwrite: true
+
+schema: "https://countries.trevorblades.com"
+
+documents: "./src/gql/**/*.gql"
+
+generates:
+  ./src/gql/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      reactApolloVersion: 3
+      withHooks: true
+      withHOC: false
+      withComponent: false
+
+hooks:
+  afterAllFileWrite:
+    - eslint --fix
