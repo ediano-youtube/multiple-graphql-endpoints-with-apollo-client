@@ -1,4 +1,6 @@
 import { Countries } from "../components/Countries";
+import { Episodes } from "../components/Episodes";
+import { Information } from "../components/Information";
 
 export default function Home() {
   return (
@@ -9,6 +11,8 @@ export default function Home() {
       </header>
 
       <Countries />
+      <Episodes />
+      <Information />
     </div>
   );
 }

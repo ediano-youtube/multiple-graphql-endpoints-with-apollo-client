@@ -1,0 +1,16 @@
+query GetInformation {
+  information {
+    edges {
+      node {
+        name
+        value
+      }
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+  }
+}

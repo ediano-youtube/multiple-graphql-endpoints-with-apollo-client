@@ -1,0 +1,14 @@
+query GetEpisodes {
+  episodes {
+    results {
+      id
+      name
+      episode
+      characters {
+        id
+        name
+        status
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
 "use client";
 
-import { useGetCountriesQuery } from "../gql/generated";
+import { useGetCountriesQuery } from "../gql/trevorblades/generated";
 
 export const Countries = () => {
-  const { data } = useGetCountriesQuery();
+  const { data } = useGetCountriesQuery({});
 
   if (!data) return null;
 

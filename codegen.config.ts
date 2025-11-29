@@ -1,9 +1,12 @@
-const defaultGenerates = {
-  plugins: ["typescript", "typescript-operations", "typescript-react-apollo"],
-  config: {
-    reactApolloVersion: 3,
-    withHooks: true,
-  },
+const defaultPlugins = [
+  "typescript",
+  "typescript-operations",
+  "typescript-react-apollo",
+];
+
+const defaultConfig = {
+  reactApolloVersion: 3,
+  withHooks: true,
 };
 
 const defaultHooks = {
@@ -21,7 +24,8 @@ export const codegen = {
         codegen: {
           generates: {
             "./src/gql/trevorblades/generated.ts": {
-              ...defaultGenerates,
+              plugins: defaultPlugins,
+              config: defaultConfig,
             },
           },
         },
@@ -38,7 +42,26 @@ export const codegen = {
         codegen: {
           generates: {
             "./src/gql/rickandmortyapi/generated.ts": {
-              ...defaultGenerates,
+              plugins: defaultPlugins,
+              config: defaultConfig,
+            },
+          },
+        },
+        hooks: {
+          ...defaultHooks,
+        },
+      },
+    },
+    catalysishub: {
+      overwrite: true,
+      schema: "https://api.catalysis-hub.org/graphql",
+      documents: "./src/gql/catalysishub/**/*.gql",
+      extensions: {
+        codegen: {
+          generates: {
+            "./src/gql/catalysishub/generated.ts": {
+              plugins: defaultPlugins,
+              config: defaultConfig,
             },
           },
         },

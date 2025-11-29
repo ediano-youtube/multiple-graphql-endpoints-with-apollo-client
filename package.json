@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "codegen": "graphql-codegen -r dotenv/config",
-    "codegen-multi": "graphql-codegen --config codegen.config.js -r dotenv/config --project ${--project}"
+    "codegen-multi": "graphql-codegen --config codegen.config.ts -r dotenv/config --project ${--project}"
   },
   "dependencies": {
     "@apollo/client": "^3.14.0",
